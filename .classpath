@@ -8,5 +8,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Program Files/apache-tomcat-8.5.0/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/PC/Downloads/mailactivation (1)/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/PC/Downloads/mailactivation (1)/mail.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
