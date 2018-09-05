@@ -31,12 +31,21 @@ public class ForgotServlet extends HttpServlet{
 			String password="1100reddy";
 			String subject=req.getParameter("sub");
 			String body=req.getParameter("body");
+			String bodyF="";
+			String test="";
+			for(int i=0;i<body.length();i++) {
+				if((int)body.charAt(i)==13) {
+				test+="<br><br>";
+				}
+				test+=body.charAt(i);
+			}
+			System.out.println("test:"+test);
 			String sub=subject;
 			String msg = "<i>Greetings!</i><br><br><br>";
 		        msg += "<b>Hi...!!There We are From Cubic IT Solution!</b><br><br><br>";
 		        msg += "<b>Thank you For U'r Association With Cubic,</b><br><br><br>";
 		        msg += "<b>Here is The Surprise To you</b><br><br><br>";
-		        msg += body;
+		        msg += test;
 		        msg +="<br><br><br><br><b>Thanks&Regards</b><br><br><br>";
 		        msg +="<b>HR-Manger(Cubic It Solution Pvt Ltd)</b><br><br><br>";
 		 	Properties props = new Properties();    
@@ -71,7 +80,7 @@ public class ForgotServlet extends HttpServlet{
 	           Transport.send(mess);    
 	           //System.out.println("message sent successfully");  
 	           //System.out.println("message sent successfully"); 
-	           resp.getWriter().print("<script>window.alert('OTP Sent To You are Mail id Successfully')</script>");
+	           resp.getWriter().print("<script>window.alert('Mail Sent To Given Mail id Successfully')</script>");
 				RequestDispatcher rd=req.getRequestDispatcher("sendingmail.jsp");
 				rd.include(req, resp);
 	          /*resp.getWriter().print("<script>window.location.href='http://localhost:8085/DemoTemplate/index.jsp'</script>");*/
